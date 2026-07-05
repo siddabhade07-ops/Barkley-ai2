@@ -25,8 +25,8 @@ It is NOT a veterinary diagnosis or treatment.
 
 <form id="triageForm">
 
-<label>Pet Type</label>
-<select>
+<label for="petType">Pet Type</label>
+<select id="petType">
 <option>Dog</option>
 <option>Cat</option>
 <option>Bird</option>
@@ -34,14 +34,14 @@ It is NOT a veterinary diagnosis or treatment.
 <option>Other</option>
 </select>
 
-<label>Pet Age</label>
-<input type="text" placeholder="Example: 3 years">
+<label for="petAge">Pet Age</label>
+<input type="text" id="petAge" placeholder="Example: 3 years">
 
-<label>Symptoms</label>
-<textarea placeholder="Describe symptoms..."></textarea>
+<label for="symptoms">Symptoms</label>
+<textarea id="symptoms" placeholder="Describe symptoms..."></textarea>
 
-<label>Upload Image</label>
-<input type="file">
+<label for="image">Upload Image</label>
+<input type="file" id="image">
 
 <button type="submit">
 Analyze
