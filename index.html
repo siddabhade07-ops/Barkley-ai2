@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Barkley AI</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<header>
+<h1>🐾 Barkley AI</h1>
+<p>Veterinary Triage Educational Assistant</p>
+</header>
+
+<main>
+
+<div class="notice">
+<strong>Important:</strong>
+This website provides educational information only.
+It is NOT a veterinary diagnosis or treatment.
+</div>
+
+<form id="triageForm">
+
+<label>Pet Type</label>
+<select>
+<option>Dog</option>
+<option>Cat</option>
+<option>Bird</option>
+<option>Rabbit</option>
+<option>Other</option>
+</select>
+
+<label>Pet Age</label>
+<input type="text" placeholder="Example: 3 years">
+
+<label>Symptoms</label>
+<textarea placeholder="Describe symptoms..."></textarea>
+
+<label>Upload Image</label>
+<input type="file">
+
+<button type="submit">
+Analyze
+</button>
+
+</form>
+
+<div class="result" id="result">
+
+<h2>Educational Triage Result</h2>
+
+<p id="output"></p>
+
+</div>
+
+</main>
+
+<footer>
+
+© 2026 Barkley AI
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
