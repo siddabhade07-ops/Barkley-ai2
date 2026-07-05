@@ -6,14 +6,33 @@
 <title>Barkley AI</title>
 
 <link rel="stylesheet" href="style.css">
-
 </head>
+
 <body>
 
 <header>
 <h1>🐾 Barkley AI</h1>
 <p>Veterinary Triage Educational Assistant</p>
+
+<nav>
+<a href="#">Home</a>
+<a href="#triageForm">Triage</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+</nav>
 </header>
+
+<section class="hero">
+<h2>Helping Pet Owners Make Better Decisions</h2>
+<p>
+Educational pet triage guidance based on the symptoms you enter.
+This is not a veterinary diagnosis.
+</p>
+
+<a href="#triageForm">
+<button class="startBtn">Start Triage</button>
+</a>
+</section>
 
 <main>
 
@@ -41,31 +60,40 @@ It is NOT a veterinary diagnosis or treatment.
 <textarea id="symptoms" placeholder="Describe symptoms..."></textarea>
 
 <label for="image">Upload Image</label>
-<input type="file" id="image">
+<input type="file" id="image" accept="image/*">
 
-<button type="submit">
-Analyze
-</button>
+<img id="preview" style="display:none;max-width:100%;margin-top:15px;border-radius:10px;">
+
+<button type="submit">Analyze</button>
 
 </form>
 
 <div class="result" id="result">
-
 <h2>Educational Triage Result</h2>
-
 <p id="output"></p>
-
 </div>
+
+<section id="about">
+<h2>About Barkley AI</h2>
+<p>
+Barkley AI is an educational veterinary triage assistant that helps
+pet owners understand the urgency of common symptoms. It does not
+replace a licensed veterinarian.
+</p>
+</section>
+
+<section id="contact">
+<h2>Contact</h2>
+<p>Email: support@barkleyai.com</p>
+</section>
 
 </main>
 
 <footer>
-
 © 2026 Barkley AI
-
 </footer>
 
 <script src="script.js"></script>
 
 </body>
-</html> 
+</html>
