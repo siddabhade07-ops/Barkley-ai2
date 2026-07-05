@@ -1,25 +1,36 @@
-document.getElementById("triageForm").addEventListener("submit",function(e){
+const form = document.getElementById("triageForm");
+const output = document.getElementById("output");
 
-e.preventDefault();
+form.addEventListener("submit", function (event) {
+    event.preventDefault();
 
-document.getElementById("result").style.display="block";
+    const symptoms = document
+        .getElementById("symptoms")
+        .value
+        .toLowerCase();
 
-document.getElementById("output").innerHTML=`
-⚠️ This website provides educational triage guidance only.<br><br>
+    let result = "";
 
-If your pet has:
+    if (
+        symptoms.includes("difficulty breathing") ||
+        symptoms.includes("seizure") ||
+        symptoms.includes("collapse") ||
+        symptoms.includes("unconscious")
+    ) {
+        result = "🔴 RED: Seek immediate veterinary care.";
+    } else if (
+        symptoms.includes("vomiting") ||
+        symptoms.includes("diarrhea") ||
+        symptoms.includes("limping") ||
+        symptoms.includes("loss of appetite")
+    ) {
+        result = "🟡 YELLOW: Schedule a veterinary visit soon.";
+    } else {
+        result = "🟢 GREEN: Continue monitoring your pet. Seek veterinary advice if symptoms worsen.";
+    }
 
-🔴 Difficulty breathing<br>
-🔴 Severe bleeding<br>
-🔴 Seizures<br>
-🔴 Collapse<br>
-🔴 Known toxin ingestion
-
-Please go to the nearest emergency veterinary hospital immediately.
-
-Otherwise, arrange an appointment with your veterinarian for an examination.
-
-This tool does NOT diagnose diseases.
-`;
-
+    output.innerHTML = `
+        <strong>${result}</strong><br><br>
+        <em>This guidance is educational only and is not a veterinary diagnosis.</em>
+    `;
 });
