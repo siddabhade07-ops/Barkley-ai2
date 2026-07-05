@@ -1,13 +1,10 @@
 const form = document.getElementById("triageForm");
 const output = document.getElementById("output");
 
-form.addEventListener("submit", function (event) {
+form.addEventListener("submit", function(event) {
     event.preventDefault();
 
-    const symptoms = document
-        .getElementById("symptoms")
-        .value
-        .toLowerCase();
+    const symptoms = document.getElementById("symptoms").value.toLowerCase();
 
     let result = "";
 
@@ -26,7 +23,7 @@ form.addEventListener("submit", function (event) {
     ) {
         result = "🟡 YELLOW: Schedule a veterinary visit soon.";
     } else {
-        result = "🟢 GREEN: Continue monitoring your pet. Seek veterinary advice if symptoms worsen.";
+        result = "🟢 GREEN: Monitor your pet. Seek veterinary advice if symptoms worsen.";
     }
 
     output.innerHTML = `
