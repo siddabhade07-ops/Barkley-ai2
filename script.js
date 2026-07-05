@@ -1,8 +1,10 @@
-document.getElementById("triageForm").addEventListener("submit", function(event) {
+const form = document.getElementById("triageForm");
+const output = document.getElementById("output");
+
+form.addEventListener("submit", function(event) {
     event.preventDefault();
 
     const symptoms = document.getElementById("symptoms").value.toLowerCase();
-    const output = document.getElementById("output");
 
     let result = "";
 
@@ -28,4 +30,4 @@ document.getElementById("triageForm").addEventListener("submit", function(event)
         <strong>${result}</strong><br><br>
         <em>This guidance is educational only and is not a veterinary diagnosis.</em>
     `;
-}); 
+});
