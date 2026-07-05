@@ -28,4 +28,4 @@ document.getElementById("triageForm").addEventListener("submit", function(event)
         <strong>${result}</strong><br><br>
         <em>This guidance is educational only and is not a veterinary diagnosis.</em>
     `;
-});
+}); 
