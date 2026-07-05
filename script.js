@@ -1,10 +1,26 @@
 const form = document.getElementById("triageForm");
 const output = document.getElementById("output");
+const image = document.getElementById("image");
+const preview = document.getElementById("preview");
 
-form.addEventListener("submit", function(event) {
+// Show image preview
+image.addEventListener("change", function () {
+    const file = this.files[0];
+
+    if (file) {
+        preview.src = URL.createObjectURL(file);
+        preview.style.display = "block";
+    }
+});
+
+// Analyze symptoms
+form.addEventListener("submit", function (event) {
     event.preventDefault();
 
-    const symptoms = document.getElementById("symptoms").value.toLowerCase();
+    const symptoms = document
+        .getElementById("symptoms")
+        .value
+        .toLowerCase();
 
     let result = "";
 
