@@ -26,7 +26,10 @@ form.addEventListener("submit", function (event) {
         symptoms.includes("difficulty breathing") ||
         symptoms.includes("seizure") ||
         symptoms.includes("collapse") ||
-        symptoms.includes("unconscious")
+        symptoms.includes("unconscious") ||
+        symptoms.includes("bleeding") ||
+        symptoms.includes("poison") ||
+        symptoms.includes("poisoning")
     ) {
         message = "🔴 RED: Seek immediate veterinary care.";
         color = "#ffe5e5";
@@ -34,12 +37,21 @@ form.addEventListener("submit", function (event) {
         symptoms.includes("vomiting") ||
         symptoms.includes("diarrhea") ||
         symptoms.includes("limping") ||
-        symptoms.includes("loss of appetite")
+        symptoms.includes("loss of appetite") ||
+        symptoms.includes("coughing") ||
+        symptoms.includes("fever")
     ) {
         message = "🟡 YELLOW: Schedule a veterinary visit soon.";
         color = "#fff8d6";
+    } else if (
+        symptoms.includes("itching") ||
+        symptoms.includes("itchy") ||
+        symptoms.includes("sneezing")
+    ) {
+        message = "🟢 GREEN: Continue monitoring your pet. If symptoms worsen, contact your veterinarian.";
+        color = "#e8f8e8";
     } else {
-        message = "🟢 GREEN: Monitor your pet. Seek veterinary advice if symptoms worsen.";
+        message = "🟢 GREEN: No specific rule matched. Continue monitoring your pet and seek veterinary advice if you are concerned.";
         color = "#e8f8e8";
     }
 
